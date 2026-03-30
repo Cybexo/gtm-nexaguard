@@ -2,18 +2,8 @@ homepage: "https://nexaguard.com"
 documentation: "https://developer.nexaguard.com"
 license: "Apache-2.0"
 
-name: "NexaGuard CMP"
-description: |
-  Official Google Tag Manager template for NexaGuard CMP.
-  Provides Consent Mode v2 default signals, regional consent configuration,
-  developer_id support, and optional CMP loader integration.
-
-categories:
-- consent
-- privacy
-
 versions:
-- sha: 7b478d4f3f76d3d145f03267445e1ab8c67c2291
-  changeNotes: "Audit fixes: GTM consent APIs, locked developer_id, global + region override defaults, and Gallery categories metadata."
+- sha: 2c0b8949daa524c15112d0f4220014929f44a362
+  changeNotes: "Lock NXG loader endpoints and remove editable infra/initial-update fields for audit-safe Gallery submission."
 - sha: ac9fc44ec9aca47a5eb0d0dc67394b9f3ed4d129
   changeNotes: "Initial release"

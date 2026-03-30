@@ -7,7 +7,7 @@ The template enables websites to:
 - Apply **Google Consent Mode v2** defaults via GTM consent APIs
 - Configure defaults with **global** values plus optional **region override**
 - Set Google developer ID automatically (`developer_id.dZTNmYW`, non-editable)
-- Optionally load the NexaGuard Web CMP Loader
+- Load the NexaGuard Web CMP Loader from locked NexaGuard endpoints
 - Ensure early execution during **Consent Initialization**
 
 This template is intended for GTM users who want to deploy NexaGuard CMP without modifying website code directly.
@@ -17,13 +17,12 @@ This template is intended for GTM users who want to deploy NexaGuard CMP without
 ## Current behavior
 
 - Uses `setDefaultConsentState` for consent defaults.
-- Uses `updateConsentState` for optional initial updates.
 - Supports required consent types:
   - `ad_storage`
   - `analytics_storage`
   - `ad_user_data`
   - `ad_personalization`
-- Injects NexaGuard loader script when enabled.
+- Injects NexaGuard loader script on every run.
 - Passes `data-consent-mode=off` to avoid duplicate default handling by loader.
 
 ---
@@ -35,8 +34,6 @@ This template is intended for GTM users who want to deploy NexaGuard CMP without
 - `regionList` (optional CSV)
 - `regionDefaultsJson` (optional JSON)
 - `waitForUpdateMs`
-- `initialUpdateJson` (optional JSON)
-- `loadNXG`, `loaderUrl`, `cdnUrl`, `assetsUrl`
 
 ---
 

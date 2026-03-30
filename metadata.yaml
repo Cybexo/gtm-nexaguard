@@ -3,7 +3,7 @@ documentation: "https://developer.nexaguard.com"
 license: "Apache-2.0"
 
 versions:
-- sha: 2c0b8949daa524c15112d0f4220014929f44a362
-  changeNotes: "Lock NXG loader endpoints and remove editable infra/initial-update fields for audit-safe Gallery submission."
+- sha: 0783f8685c6502b4c435584b24daaa1e50d27292
+  changeNotes: "Enforce minimum 500ms wait_for_update for async-safe Consent Mode behavior."
 - sha: ac9fc44ec9aca47a5eb0d0dc67394b9f3ed4d129
   changeNotes: "Initial release"

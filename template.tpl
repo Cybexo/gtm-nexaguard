@@ -99,6 +99,12 @@ function toNumber(v, fallback) {
   return (n === n) ? n : fallback;
 }
 
+function normalizeWaitForUpdate(v) {
+  var n = toNumber(v, 500);
+  if (n < 500) return 500;
+  return n;
+}
+
 function parseRegionCsv(csv) {
   var s = toStr(csv).trim();
   if (!s) return [];
@@ -197,7 +203,7 @@ function finishAfterWait(ms) {
 (function main() {
   var settingsId = data.settingsId;
   var developerId = 'dZTNmYW'; // locked per Google CMP partner requirement
-  var waitMs = toNumber(data.waitForUpdateMs, 500);
+  var waitMs = normalizeWaitForUpdate(data.waitForUpdateMs);
   var regionList = parseRegionCsv(data.regionList);
   var fallbackDefaults = {
     ad_storage: 'denied',
@@ -517,7 +523,7 @@ scenarios:
       analytics_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
-      wait_for_update: 0
+      wait_for_update: 500
     });
     assertApi('injectScript').wasCalled();
 
@@ -528,7 +534,7 @@ scenarios:
       globalDefaultsJson: '{"ad_storage":"denied","analytics_storage":"denied","ad_user_data":"denied","ad_personalization":"denied"}',
       regionList: 'DE, FR',
       regionDefaultsJson: '{"ad_storage":"granted","analytics_storage":"denied","ad_user_data":"granted","ad_personalization":"denied"}',
-      waitForUpdateMs: 250,
+      waitForUpdateMs: 750,
       gtmOnSuccess: function () {},
       gtmOnFailure: function () {}
     });
@@ -538,15 +544,36 @@ scenarios:
       analytics_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
-      wait_for_update: 250
+      wait_for_update: 750
     });
     assertApi('setDefaultConsentState').wasCalledWith({
       ad_storage: 'granted',
       analytics_storage: 'denied',
       ad_user_data: 'granted',
       ad_personalization: 'denied',
-      wait_for_update: 250,
+      wait_for_update: 750,
       region: ['DE', 'FR']
+    });
+    assertApi('injectScript').wasCalled();
+
+- name: Enforces minimum wait_for_update of 500ms
+  code: |-
+    runCode({
+      settingsId: 'demo-123',
+      globalDefaultsJson: '{"ad_storage":"denied","analytics_storage":"denied","ad_user_data":"denied","ad_personalization":"denied"}',
+      regionList: '',
+      regionDefaultsJson: '',
+      waitForUpdateMs: 100,
+      gtmOnSuccess: function () {},
+      gtmOnFailure: function () {}
+    });
+
+    assertApi('setDefaultConsentState').wasCalledWith({
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
     });
     assertApi('injectScript').wasCalled();
 
@@ -607,7 +634,7 @@ scenarios:
       analytics_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
-      wait_for_update: 0
+      wait_for_update: 500
     });
     assertApi('injectScript').wasCalled();
 

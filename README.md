@@ -17,6 +17,7 @@ This template is intended for GTM users who want to deploy NexaGuard CMP without
 ## Current behavior
 
 - Uses `setDefaultConsentState` for consent defaults.
+- Enforces `wait_for_update` minimum of `500ms` for async-safe consent handling.
 - Supports required consent types:
   - `ad_storage`
   - `analytics_storage`
@@ -33,7 +34,7 @@ This template is intended for GTM users who want to deploy NexaGuard CMP without
 - `globalDefaultsJson`
 - `regionList` (optional CSV)
 - `regionDefaultsJson` (optional JSON)
-- `waitForUpdateMs`
+- `waitForUpdateMs` (minimum enforced at `500`)
 
 ---
 

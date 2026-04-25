@@ -3,6 +3,8 @@ documentation: "https://developer.cybexo.com"
 license: "Apache-2.0"
 
 versions:
+- sha: 91e77c6a976b401070587b08eedb6689597e6554
+  changeNotes: "Rebrand template to Cybexo CMP and migrate locked endpoints to cybexo/edge domains."
 - sha: 0783f8685c6502b4c435584b24daaa1e50d27292
   changeNotes: "Enforce minimum 500ms wait_for_update for async-safe Consent Mode behavior."
 - sha: ac9fc44ec9aca47a5eb0d0dc67394b9f3ed4d129

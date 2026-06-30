@@ -3,6 +3,8 @@ documentation: "https://developer.cybexo.com"
 license: "Apache-2.0"
 
 versions:
+- sha: 048879a7e4227daa8af4ac9144919f461649503b
+  changeNotes: "Rename template repository identity to CYBEXO-GTM-Consent-Template and align Cybexo runtime loader metadata."
 - sha: 6aad44caf75004122338f9981c5730807cfdb555
   changeNotes: "Refresh gallery thumbnail/logo asset for Cybexo CMP."
 - sha: 91e77c6a976b401070587b08eedb6689597e6554

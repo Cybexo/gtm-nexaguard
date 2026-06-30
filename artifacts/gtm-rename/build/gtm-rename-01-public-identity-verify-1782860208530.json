@@ -1,0 +1,43 @@
+{
+  "schema": "cybexo.gtm_rename_01_public_identity.v1",
+  "generatedAt": "2026-06-30T22:56:48.530Z",
+  "pass": true,
+  "checks": [
+    {
+      "id": "canonical_repo_identity_present",
+      "pass": true
+    },
+    {
+      "id": "program_docs_present",
+      "pass": true
+    },
+    {
+      "id": "cybexo_endpoint_constants_present",
+      "pass": true
+    },
+    {
+      "id": "legacy_endpoint_constant_names_removed",
+      "pass": true
+    },
+    {
+      "id": "loader_still_uses_locked_cybexo_endpoints",
+      "pass": true
+    },
+    {
+      "id": "legacy_load_nxg_fixture_removed",
+      "pass": true
+    },
+    {
+      "id": "cybexo_fixture_name_present",
+      "pass": true
+    },
+    {
+      "id": "gtm_display_name_unchanged",
+      "pass": true
+    },
+    {
+      "id": "developer_id_lock_unchanged",
+      "pass": true
+    }
+  ]
+}

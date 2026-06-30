@@ -1,0 +1,32 @@
+{
+  "schema": "cybexo.gtm_template_package_manifest.v1",
+  "generatedAt": "2026-06-30T22:56:48.600Z",
+  "packageName": "CYBEXO-GTM-Consent-Template",
+  "files": [
+    {
+      "file": "template.tpl",
+      "bytes": 119483,
+      "sha256": "6c8d2e509c9449dcb2a0c35d1a5de9207c258a934ca08222d1039fd20f4f5428"
+    },
+    {
+      "file": "metadata.yaml",
+      "bytes": 599,
+      "sha256": "f297ba3d92d6794ca75246d86b3bf674f573bb9f74a9aed080ea8f92f1c45a53"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2026,
+      "sha256": "b9c7a15543733b1c72438280e18e32902520b8855584452d3db077112f71dbed"
+    },
+    {
+      "file": "logo.png",
+      "bytes": 76009,
+      "sha256": "35f65cbd15f0fbaecd80a377612f4eb42144ae365506fe18f53571b3a3f5e374"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ]
+}

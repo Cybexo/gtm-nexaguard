@@ -85,9 +85,9 @@ const callLater               = require('callLater');
 const encodeUriComponent      = require('encodeUriComponent');
 
 var CONSENT_KEYS = ['ad_storage', 'analytics_storage', 'ad_user_data', 'ad_personalization'];
-var NXG_LOADER_URL = 'https://cmp.cybexo.com/loader.js';
-var NXG_CDN_URL = 'https://edge.cybexo.com';
-var NXG_ASSETS_URL = 'https://cmp.cybexo.com';
+var CYBEXO_LOADER_URL = 'https://cmp.cybexo.com/loader.js';
+var CYBEXO_CDN_URL = 'https://edge.cybexo.com';
+var CYBEXO_ASSETS_URL = 'https://cmp.cybexo.com';
 
 function toStr(v) {
   return v == null ? '' : '' + v;
@@ -248,10 +248,11 @@ function finishAfterWait(ms) {
   // 3) Load CMP loader from locked Cybexo endpoints.
 
   // Pass values via query params so loader never falls back to UNKNOWN_SETTINGS_ID.
-  var loaderUrlWithParams = appendParams(NXG_LOADER_URL, {
+  var loaderUrlWithParams = appendParams(CYBEXO_LOADER_URL, {
     'data-settings-id': settingsId,
-    'data-cdn-url': NXG_CDN_URL,
-    'data-assets-url': NXG_ASSETS_URL,
+    'data-cdn-url': CYBEXO_CDN_URL,
+    'data-assets-url': CYBEXO_ASSETS_URL,
+    'data-developer-id': developerId,
     // Consent defaults are handled by GTM APIs in this template.
     'data-consent-mode': 'off'
   });
@@ -507,7 +508,7 @@ scenarios:
       regionList: '',
       regionDefaultsJson: '{"ad_storage":"denied","analytics_storage":"denied","ad_user_data":"denied","ad_personalization":"denied"}',
       developerId: 'malicious_override',
-      loadNXG: false,
+      loadCybexo: false,
       loaderUrl: 'https://evil.example/loader.js',
       cdnUrl: 'https://evil.example',
       assetsUrl: 'https://evil.example',

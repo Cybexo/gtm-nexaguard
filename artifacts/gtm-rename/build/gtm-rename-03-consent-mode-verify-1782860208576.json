@@ -1,0 +1,55 @@
+{
+  "schema": "cybexo.gtm_rename_03_consent_mode.v1",
+  "generatedAt": "2026-06-30T22:56:48.576Z",
+  "pass": true,
+  "checks": [
+    {
+      "id": "consent_mode_v2_keys_present",
+      "pass": true
+    },
+    {
+      "id": "developer_id_locked_and_override_tested",
+      "pass": true
+    },
+    {
+      "id": "global_default_consent_state_present",
+      "pass": true
+    },
+    {
+      "id": "region_override_consent_state_present",
+      "pass": true
+    },
+    {
+      "id": "wait_for_update_minimum_enforced",
+      "pass": true
+    },
+    {
+      "id": "safe_json_fallbacks_present",
+      "pass": true
+    },
+    {
+      "id": "missing_settings_id_fails_fast",
+      "pass": true
+    },
+    {
+      "id": "gtm_tests_cover_consent_mode_regressions",
+      "pass": true
+    },
+    {
+      "id": "access_consent_permission_covers_required_keys",
+      "pass": true
+    },
+    {
+      "id": "developer_id_data_layer_permission_locked",
+      "pass": true
+    },
+    {
+      "id": "inject_script_permission_locked_to_cybexo_endpoints",
+      "pass": true
+    },
+    {
+      "id": "slice_doc_acceptance_present",
+      "pass": true
+    }
+  ]
+}

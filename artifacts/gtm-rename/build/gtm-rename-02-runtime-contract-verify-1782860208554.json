@@ -1,0 +1,51 @@
+{
+  "schema": "cybexo.gtm_rename_02_runtime_contract.v1",
+  "generatedAt": "2026-06-30T22:56:48.553Z",
+  "pass": true,
+  "checks": [
+    {
+      "id": "locked_cybexo_loader_endpoint_preserved",
+      "pass": true
+    },
+    {
+      "id": "locked_supporting_endpoints_preserved",
+      "pass": true
+    },
+    {
+      "id": "developer_id_passed_to_loader",
+      "pass": true
+    },
+    {
+      "id": "gtm_developer_id_set_preserved",
+      "pass": true
+    },
+    {
+      "id": "consent_mode_off_preserved",
+      "pass": true
+    },
+    {
+      "id": "settings_and_asset_params_preserved",
+      "pass": true
+    },
+    {
+      "id": "no_legacy_init_call_in_template",
+      "pass": true
+    },
+    {
+      "id": "no_cybexo_init_call_in_template",
+      "pass": true
+    },
+    {
+      "id": "no_direct_legacy_event_bridge_in_template",
+      "pass": true
+    },
+    {
+      "id": "runtime_contract_doc_present",
+      "pass": true
+    },
+    {
+      "id": "readme_runtime_contract_note_present",
+      "pass": true
+    }
+  ]
+}

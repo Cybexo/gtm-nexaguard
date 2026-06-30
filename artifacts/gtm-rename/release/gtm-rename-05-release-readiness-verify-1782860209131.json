@@ -1,0 +1,83 @@
+{
+  "schema": "cybexo.gtm_rename_05_release_readiness.v1",
+  "generatedAt": "2026-06-30T22:56:49.130Z",
+  "pass": true,
+  "checks": [
+    {
+      "id": "prior_slice_docs_done",
+      "pass": true
+    },
+    {
+      "id": "release_surface_cybexo_primary",
+      "pass": true
+    },
+    {
+      "id": "git_branch_detected",
+      "pass": true,
+      "currentBranch": "main"
+    },
+    {
+      "id": "git_status_available",
+      "pass": true,
+      "dirty": true
+    },
+    {
+      "id": "target_remote_documented",
+      "pass": true,
+      "targetRemote": "https://github.com/Cybexo/CYBEXO-GTM-Consent-Template.git"
+    },
+    {
+      "id": "live_web_cmp_loader_manifest_reachable",
+      "pass": true,
+      "liveBuild": {
+        "version": "1.5.22",
+        "build": "production.20260630.221130.run28479140039.eeb6a93e",
+        "channel": "production",
+        "commit": "eeb6a93e",
+        "built": "2026-06-30T22:11:30.788Z",
+        "schema": "cybexo.cmp.build.v1",
+        "artifacts": {
+          "loader": {
+            "path": "public/loader.js",
+            "payloadSha256": "0a6163a74da7116a48c526049c1783bf2978ffa0f114fadf7a71536bfbe21c0c",
+            "bytes": 3528331
+          },
+          "preview-loader": {
+            "path": "public/preview-loader.js",
+            "payloadSha256": "fe827d1ca71835310fd98f1255b0d0e38ec718d6b886f432ae6e2a6a55785172",
+            "bytes": 3430632
+          }
+        }
+      },
+      "liveBuildError": null
+    }
+  ],
+  "releaseReadiness": {
+    "currentBranch": "main",
+    "currentRemote": "https://github.com/Cybexo/CYBEXO-GTM-Consent-Template.git",
+    "targetRemote": "https://github.com/Cybexo/CYBEXO-GTM-Consent-Template.git",
+    "remoteReady": true,
+    "remoteAction": "No remote change required.",
+    "gitStatus": "M README.md\n M template.tpl\n?? artifacts/\n?? docs/\n?? scripts/",
+    "liveBuild": {
+      "version": "1.5.22",
+      "build": "production.20260630.221130.run28479140039.eeb6a93e",
+      "channel": "production",
+      "commit": "eeb6a93e",
+      "built": "2026-06-30T22:11:30.788Z",
+      "schema": "cybexo.cmp.build.v1",
+      "artifacts": {
+        "loader": {
+          "path": "public/loader.js",
+          "payloadSha256": "0a6163a74da7116a48c526049c1783bf2978ffa0f114fadf7a71536bfbe21c0c",
+          "bytes": 3528331
+        },
+        "preview-loader": {
+          "path": "public/preview-loader.js",
+          "payloadSha256": "fe827d1ca71835310fd98f1255b0d0e38ec718d6b886f432ae6e2a6a55785172",
+          "bytes": 3430632
+        }
+      }
+    }
+  }
+}
